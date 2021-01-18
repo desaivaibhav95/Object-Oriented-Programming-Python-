@@ -1,0 +1,40 @@
+# Simple linked list with 3 nodes
+
+# Node class
+class Node:
+    
+    # initialize the node object
+    def __init__(self,data):
+        self.data = data # assign data
+        self.next = None # initialize the next as null
+        
+# Linked list class contains a node object
+class LinkedList:
+    
+    # function to initialize head(first node)
+    def _init__(self):
+        self.head = None    
+        
+    # function for printing linked list from head (traversing through a linked list)
+    def printlist(self):
+        temp = self.head # hold the head(first node) in a temporary variable
+        while(temp):
+            print(temp.data)  # print the data in the first node
+            temp = temp.next  # while traversing through the elements of the linkedlist
+        
+# code execution starts here
+if __name__ == '__main__':
+    
+    # start with an empty list
+    llist = LinkedList()
+    
+    llist.head = Node(1)  # the first node known as head
+    second = Node(2)  # the second node
+    third = Node(3)  # the third node
+    fourth = Node(4)  # the fourth node
+    
+    llist.head.next = second  # linking first node to the second
+    second.next = third  # linking second node to the third
+    third.next = fourth  # linking third node to the fourth
+    
+    llist.printlist()
